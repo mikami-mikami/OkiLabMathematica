@@ -1,0 +1,261 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10275,        253]
+NotebookOptionsPosition[      9176,        227]
+NotebookOutlinePosition[      9534,        243]
+CellTagsIndexPosition[      9491,        240]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+\:4e0b\:306e\:90e8\:5206\:306f\:3001\:30d1\:30c3\:30b1\:30fc\:30b8\:3092\:30a4\
+\:30f3\:30b9\:30c8\:30fc\:30eb\:3059\:308b\:3068\:304d\:306b\:5b9f\:884c\:3057\
+\:307e\:3059\:3002\:521d\:671f\:5316\:30bb\:30eb\:3092\:5b9f\:884c\:3059\:308b\
+\:304b\:3069\:3046\:304b\:306e\:8cea\:554f\:306b\:306fYes\:3068\:7b54\:3048\
+\:3066\:4e0b\:3055\:3044\:3002\:30a4\:30f3\:30b9\:30c8\:30fc\:30eb\:306e\:7d50\
+\:679c\:3001Users/XXX/Appdata/Roaming/Mathematica/Applications/\:306b
+*.mx\:306e\:30d5\:30a1\:30a4\:30eb\:304c\:4f5c\:3089\:308c\:3001<<\:3067\:8aad\
+\:307f\:53d6\:308a\:53ef\:80fd\:306b\:306a\:308a\:307e\:3059\:3002
+??\[CloseCurlyDoubleQuote]*`\[CloseCurlyDoubleQuote]\:3067Help\:304c\:3067\
+\:307e\:3059\:3002
+*\:306f\:4e0b\:306e\:3001{}\:306b\:5165\:3063\:3066\:3044\:308b\:6587\:5b57\
+\:5217\:ff08\:30d1\:30c3\:30b1\:30fc\:30b8\:540d)\:304c\:5165\:308a\:307e\
+\:3059\:3002\
+\>", "Text",
+ CellChangeTimes->{{3.733990759488371*^9, 3.733990928532877*^9}, {
+  3.7339911759901123`*^9, 3.7339911798032155`*^9}, {3.7698140076938496`*^9, 
+  3.769814009637367*^9}, {3.769815072907477*^9, 
+  3.7698150746974077`*^9}},ExpressionUUID->"3d7c0d1a-0900-4cd0-9330-\
+01e004e98a45"],
+
+Cell[BoxData[
+ RowBox[{"DumpSave", "[", 
+  RowBox[{
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+     "$UserBaseDirectory", ",", "\"\<Applications\>\"", ",", 
+      "\"\<saveWithTimestamp.mx\>\""}], "}"}], "]"}], ",", 
+   "\"\<saveWithTimestamp`\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.7339667242132993`*^9, 3.7339667471657743`*^9}, {
+   3.7339668161035957`*^9, 3.733966843526306*^9}, {3.7339680575430117`*^9, 
+   3.733968061358493*^9}, {3.7339732208913736`*^9, 3.7339732399320865`*^9}, {
+   3.733987255591903*^9, 3.733987258118532*^9}, {3.733987657244071*^9, 
+   3.7339876589535866`*^9}, {3.733992340171082*^9, 3.7339923684174137`*^9}, 
+   3.736047956526913*^9, {3.7698140273537474`*^9, 
+   3.7698140435154524`*^9}},ExpressionUUID->"afcedff6-d8de-4e34-a9e0-\
+938f2bc31285"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"BeginPackage", "[", "\"\<saveWithTimestamp`\>\"", "]"}], 
+  ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.7698140791110935`*^9, 
+  3.7698140957184377`*^9}},ExpressionUUID->"74ed014c-fb5a-48c5-a127-\
+044312bbc5c2"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"saveWithTimestamp", "::", "usage"}], "=", 
+   "\"\<\:30ce\:30fc\:30c8\:30d6\:30c3\:30af\:30d5\:30a1\:30a4\:30eb\:3092\
+\:30bf\:30a4\:30e0\:30b9\:30bf\:30f3\:30d7\:4ed8\:304d\:3067\:4fdd\:5b58\:3059\
+\:308b\:95a2\:6570\:3002\n\:30bf\:30a4\:30e0\:30b9\:30bf\:30f3\:30d7\:306e\
+\:5f62\:5f0f\:306f\\t*_[\:897f\:66a6\:4e0b2\:6841][\:67082\:6841][\:65e52\
+\:6841]-[\:66422\:6841][\:52062\:6841][\:79d22\:6841].nb\\t\:3067\:516812\
+\:6841\:3002\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"save", "::", "usage"}], "=", 
+   "\"\<saveWithTimestamp\:306e\:77ed\:7e2e\:5f62\:3002\nsave[]\:3092\:5b9f\
+\:884c\:3059\:308b\:3068\:3001\:73fe\:884c\:30ce\:30fc\:30c8\:30d6\:30c3\:30af\
+\:304c\:30bf\:30a4\:30e0\:30b9\:30bf\:30f3\:30d7\:4ed8\:304d\:3067\:4fdd\:5b58\
+\:3055\:308c\:308b\:3002\n\:73fe\:884c\:30ce\:30fc\:30c8\:30d6\:30c3\:30af\
+\:304c\:65e2\:306b\:30bf\:30a4\:30e0\:30b9\:30bf\:30f3\:30d7\:4ed8\:304d\:306e\
+\:5834\:5408\:3001\:30bf\:30a4\:30e0\:30b9\:30bf\:30f3\:30d7\:304c\:66f4\:65b0\
+\:3055\:308c\:308b\:3002\n\:73fe\:884c\:30ce\:30fc\:30c8\:30d6\:30c3\:30af\
+\:304c\:672a\:4fdd\:5b58\:306e\:5834\:5408\:3001\:30c7\:30b9\:30af\:30c8\:30c3\
+\:30d7\:306b\:4fdd\:5b58\:3055\:308c\:308b\:3002\>\""}], ";"}]}], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.769814099548134*^9, 3.76981410768395*^9}, {
+   3.769814163870259*^9, 3.769814541902526*^9}, 
+   3.7698150246195016`*^9},ExpressionUUID->"5c840092-03e6-4284-a3d9-\
+0305d0395d77"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Begin", "[", "\"\<`Private`\>\"", "]"}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.7698145490022917`*^9, 
+  3.769814556219532*^9}},ExpressionUUID->"3f52dae0-8bc9-40ad-a074-\
+eb696e114a70"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"saveWithTimestamp", "[", "filename_String", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "currentdirname", ",", "currentfilename", ",", "timestring", ",", 
+       "savepath", ",", "newfilename", ",", "currentdir", ",", "pos"}], "}"}],
+      ",", "\n", 
+     RowBox[{
+      RowBox[{"currentdirname", "=", 
+       RowBox[{"FileNameSplit", "[", "filename", "]"}]}], ";", "\n", 
+      RowBox[{"currentfilename", "=", 
+       RowBox[{"currentdirname", "[", 
+        RowBox[{"[", 
+         RowBox[{"-", "1"}], "]"}], "]"}]}], ";", "\n", 
+      RowBox[{"pos", "=", 
+       RowBox[{"StringPosition", "[", 
+        RowBox[{"currentfilename", ",", 
+         RowBox[{
+         "RegularExpression", "[", "\"\<_[0-9]+-[0-9]+\\\\.nb$\>\"", "]"}]}], 
+        "]"}]}], ";", "\n", 
+      RowBox[{"timestring", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"Date", "[", "]"}], "//", 
+           RowBox[{
+            RowBox[{"Fold", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"#1", "*", "100"}], "+", 
+                 RowBox[{"Floor", "[", "#2", "]"}]}], ")"}], "&"}], ",", 
+              RowBox[{"#", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], ",", 
+              RowBox[{"Drop", "[", 
+               RowBox[{"#", ",", "1"}], "]"}]}], "]"}], "&"}]}], "//", 
+          "ToString"}], "//", 
+         RowBox[{
+          RowBox[{"StringDrop", "[", 
+           RowBox[{"#", ",", "2"}], "]"}], "&"}]}], "//", 
+        RowBox[{
+         RowBox[{"StringInsert", "[", 
+          RowBox[{"#", ",", "\"\<-\>\"", ",", "7"}], "]"}], "&"}]}]}], ";", 
+      "\n", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"pos", "!=", 
+         RowBox[{"{", "}"}]}], ",", 
+        RowBox[{"newfilename", "=", 
+         RowBox[{"StringReplacePart", "[", 
+          RowBox[{"currentfilename", ",", 
+           RowBox[{"\"\<_\>\"", "<>", "timestring", "<>", "\"\<.nb\>\""}], 
+           ",", 
+           RowBox[{"pos", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}], ",", 
+        RowBox[{"newfilename", "=", 
+         RowBox[{"StringInsert", "[", 
+          RowBox[{"currentfilename", ",", 
+           RowBox[{"\"\<_\>\"", "<>", "timestring"}], ",", 
+           RowBox[{"-", "4"}]}], "]"}]}], ",", "Null"}], "]"}], ";", "\n", 
+      RowBox[{"savepath", "=", 
+       RowBox[{
+        RowBox[{"FileNameJoin", "[", " ", 
+         RowBox[{"Append", "[", 
+          RowBox[{
+           RowBox[{"currentdirname", "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ";;", 
+              RowBox[{"-", "2"}]}], "]"}], "]"}], ",", "newfilename"}], "]"}],
+          "]"}], "//", "ToString"}]}], ";", "\n", 
+      RowBox[{"Print", "[", 
+       RowBox[{"\"\<Saved in \>\"", "<>", "savepath", "<>", "\"\<.\>\""}], 
+       "]"}], ";", "\n", 
+      RowBox[{"NotebookSave", "[", 
+       RowBox[{
+        RowBox[{"SelectedNotebook", "[", "]"}], ",", "savepath"}], "]"}]}]}], 
+    "\n", "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"save", "[", "]"}], ":=", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"NotebookFileName", "[", "]"}], "===", "$Failed"}], ",", 
+     RowBox[{"saveWithTimestamp", "[", 
+      RowBox[{
+      "\"\<C:\\\\Users\\\\\>\"", "<>", "$UserName", "<>", 
+       "\"\<\\\\Desktop\\\\new.nb\>\""}], "]"}], ",", 
+     RowBox[{"saveWithTimestamp", "[", 
+      RowBox[{"NotebookFileName", "[", "]"}], "]"}]}], "]"}]}], 
+  ";"}]}], "Code",
+ CellChangeTimes->{
+  3.735877742540351*^9, {3.735877828667796*^9, 3.7358778342137766`*^9}, {
+   3.735878987173051*^9, 3.7358790588811255`*^9}, {3.7358793177983875`*^9, 
+   3.7358793239087877`*^9}, {3.735879369877227*^9, 3.735879391651379*^9}, {
+   3.7358795136808357`*^9, 3.7358795642803664`*^9}, {3.735880349797043*^9, 
+   3.735880353188119*^9}, {3.7358804856490297`*^9, 3.7358804867009935`*^9}, {
+   3.7359554272704625`*^9, 3.7359554366408906`*^9}, 
+   3.769814972495125*^9},ExpressionUUID->"174bac19-5e81-4b64-b001-\
+0103901fc94d"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"End", "[", "]"}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.769814585822288*^9, 
+  3.7698145890944147`*^9}},ExpressionUUID->"e4826b65-f8c7-4dc9-979e-\
+d39a40a2f02b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EndPackage", "[", "]"}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.769814590634349*^9, 
+  3.7698145936112523`*^9}},ExpressionUUID->"9642cf15-96f4-47ee-9fe2-\
+cb9227eaa197"]
+},
+WindowSize->{1366, 725},
+WindowMargins->{{-8, Automatic}, {720, Automatic}},
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (2018\:5e743\:670812\
+\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1175, 19, 100, "Text",ExpressionUUID->"3d7c0d1a-0900-4cd0-9330-01e004e98a45"],
+Cell[1736, 41, 801, 16, 47, "Input",ExpressionUUID->"afcedff6-d8de-4e34-a9e0-938f2bc31285"],
+Cell[2540, 59, 268, 7, 61, "Input",ExpressionUUID->"74ed014c-fb5a-48c5-a127-044312bbc5c2",
+ InitializationCell->True],
+Cell[2811, 68, 1518, 26, 140, "Input",ExpressionUUID->"5c840092-03e6-4284-a3d9-0305d0395d77",
+ InitializationCell->True],
+Cell[4332, 96, 247, 6, 61, "Input",ExpressionUUID->"3f52dae0-8bc9-40ad-a074-eb696e114a70",
+ InitializationCell->True],
+Cell[4582, 104, 4129, 105, 231, "Code",ExpressionUUID->"174bac19-5e81-4b64-b001-0103901fc94d"],
+Cell[8714, 211, 224, 6, 61, "Input",ExpressionUUID->"e4826b65-f8c7-4dc9-979e-d39a40a2f02b",
+ InitializationCell->True],
+Cell[8941, 219, 231, 6, 61, "Input",ExpressionUUID->"9642cf15-96f4-47ee-9fe2-cb9227eaa197",
+ InitializationCell->True]
+}
+]
+*)
+
